@@ -1,0 +1,73 @@
+#+title: Testing
+
+BUG: An inline source block will overwrite the output of a previous source block, when session and async are both enabled. Disabling either one causes the bad behavior to stop. Bug appears for both bash and python.
+
+* Bash - example of bug
+:PROPERTIES:
+:header-args: :results output :async t :session bash_async
+:END:
+
+The output of this cell will change to "incline source block" after the inline cell is run.
+#+begin_src sh
+date
+echo normal source block
+#+end_src
+
+#+RESULTS:
+: Sun Mar  9 07:16:30 PM EDT 2025 inline source block
+
+
+src_sh[:exports results :results output pp]{echo "$(date) inline source block"} {{{results(=83f543ef-9157-4e49-839c-0707ba7378d2=)}}}
+
+
+* Bash - okay with session
+
+:PROPERTIES:
+:header-args: :results output :session bash_no_async
+:END:
+
+#+begin_src sh
+date
+echo normal source block
+#+end_src
+
+#+RESULTS:
+| Sun    | Mar    |     9 | 06:30:38 | PM | EDT | 2025 |
+| normal | source | block |          |    |     |      |
+
+src_sh[:exports results :results output pp]{echo "$(date) inline source block"} {{{results(=Sun Mar  9 06:30:42 PM EDT 2025 inline source block=)}}}
+
+* Bash - okay with just async
+:PROPERTIES:
+:header-args: :results output :async yes
+:END:
+
+#+begin_src bash
+date
+echo normal source block
+#+end_src
+
+#+RESULTS:
+: Sun Mar  9 06:19:10 PM EDT 2025
+: normal source block
+
+src_bash[:exports results :results output pp]{echo "$(date) inline source block"} {{{results(=Sun Mar  9 06:19:24 PM EDT 2025 inline source block=)}}}
+
+* Same problem for python
+:PROPERTIES:
+:header-args: :results output drawer :python "nix-shell --run python" :tangle yes :session python_async :async t
+:END:
+
+Okay without async
+
+#+begin_src python
+from datetime import datetime
+print(f"{datetime.now()} Top source block!")
+#+end_src
+
+#+RESULTS:
+:results:
+2025-03-09 18:20:23.816122 Inline source block!
+:end:
+
+src_python[:exports results :results output pp :timer-show no]{print(f"{datetime.now()} Inline source block!")} {{{results(=aafe52ef-ad94-41f9-a6b8-cd4cb9d8beed=)}}}

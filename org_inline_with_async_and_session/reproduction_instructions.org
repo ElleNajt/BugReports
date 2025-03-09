@@ -1,0 +1,21 @@
+#+title: Info for bug reproduction
+
+* Run example on minimal emacs config
+
+To reproduce the bug, run the following, which will execute inline_org_babel_bug.org:
+
+#+name: minimal_emacs
+#+begin_src bash
+emacs -Q --eval "(progn (require 'org) (require 'ob-python) (require 'ob-shell)  (org-babel-do-load-languages 'org-babel-load-languages '((python . t) (shell . t))) (find-file \"inline_org_babel_bug.org\") )"
+#+end_src
+
+
+* System information
+
+Documenting my system and emacs versions:
+
+#+begin_src bash
+emacs -Q --batch --eval "(progn (require 'org) (with-temp-file \"system_info.log\" (insert (format \"Emacs Version: %s\nOrg Version: %s\nSystem Type: %s\" (emacs-version) (org-version nil 'full) system-type ))))"
+#+end_src
+
+#+RESULTS:
