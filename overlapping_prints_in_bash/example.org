@@ -1,18 +1,12 @@
 #+title: Example
+#+property: header-args:bash :session test :async t
 
-#+begin_src bash :session test  :async t
+#+begin_src bash
 sleep 10
 echo 1
 #+end_src
 
-#+RESULTS:
-: 383ef695-b29c-48fa-890a-bc92f292f510
-
-
-#+begin_src bash :session test  :async t
+#+begin_src bash
 sleep 10
 echo 2
 #+end_src
-
-#+RESULTS:
-: 0c80b6e7-f26e-4877-b8cc-843e6bfda503
