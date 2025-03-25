@@ -1,0 +1,22 @@
+#+title: Example
+
+#+begin_src bash :session test  :async t
+sleep 10
+echo 1
+#+end_src
+
+#+RESULTS:
+: echo 'ob_comint_async_shell_start_b48be3c9-7554-4c28-87ff-61baf9cb8c53'
+: sleep 10
+: echo 2
+: echo 'ob_comint_async_shell_end_b48be3c9-7554-4c28-87ff-61baf9cb8c53'
+: 1
+
+
+#+begin_src bash :session test  :async t
+sleep 10
+echo 2
+#+end_src
+
+#+RESULTS:
+: b48be3c9-7554-4c28-87ff-61baf9cb8c53

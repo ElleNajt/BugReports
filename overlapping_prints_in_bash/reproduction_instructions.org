@@ -1,0 +1,67 @@
+#+title: Info for bug reproduction
+
+* Run example on minimal emacs config
+
+To reproduce the bug, run the following,
+
+#+name: minimal_emacs
+#+begin_src bash
+emacs -Q --eval "(progn (require 'org)  (require 'ob-shell)  (org-babel-do-load-languages 'org-babel-load-languages '( (shell . t))) (find-file \"example.org\")) "
+#+end_src
+
+Then execute the two cells, making sure to execute the second cell before the first has completed.
+
+The output should look like this:
+
+#+begin_src bash :session test  :async t
+sleep 10
+echo 1
+#+end_src
+
+#+RESULTS:
+: echo 'ob_comint_async_shell_start_0c80b6e7-f26e-4877-b8cc-843e6bfda503'
+: sleep 10
+: echo 2
+: echo 'ob_comint_async_shell_end_0c80b6e7-f26e-4877-b8cc-843e6bfda503'
+: 1
+
+
+#+begin_src bash :session test  :async t
+sleep 10
+echo 2
+#+end_src
+
+#+RESULTS:
+: 0c80b6e7-f26e-4877-b8cc-843e6bfda503
+
+
+Then after a while the second cell finishes it will look like this:
+
+
+#+begin_src bash :session test  :async t
+sleep 10
+echo 1
+#+end_src
+
+#+RESULTS:
+: 2
+
+
+#+begin_src bash :session test  :async t
+sleep 10
+echo 2
+#+end_src
+
+#+RESULTS:
+: 0c80b6e7-f26e-4877-b8cc-843e6bfda503
+
+
+* System information
+
+Documenting my system and emacs versions:
+
+#+begin_src bash
+emacs -Q --batch --eval "(progn (require 'org) (with-temp-file \"system_info.log\" (insert (format \"Emacs Version: %s\nOrg Version: %s\nSystem Type: %s\" (emacs-version) (org-version nil 'full) system-type ))))"
+#+end_src
+
+#+RESULTS:
