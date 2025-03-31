@@ -1,0 +1,48 @@
+#+title: Info for bug reproduction
+
+
+* Make minimal example:
+
+Here is a bash script that constructs the example file.
+
+#+begin_src bash
+#!/bin/bash
+
+cat << 'EOF' > blocks.org
+#+title: Many Blocks
+#+PROPERTY: header-args:python :results output drawer :async t :tangle yes :session python_example
+EOF
+
+for i in {1..90}; do
+    printf '\n#+begin_src python
+import time
+time.sleep(10)
+#+end_src\n' >> blocks.org
+done
+#+end_src
+
+#+RESULTS:
+
+I chose 90 because I'm not running into this error with 80.
+
+* Run example on minimal emacs config
+
+To reproduce the bug, run the following, which will execute blocks.org:
+
+Note that (setq org-confirm-babel-evaluate nil) is set, so make sure you trust blocks.org before evaluating this.
+
+#+name: minimal_emacs
+#+begin_src bash
+emacs -Q --eval "(progn (require 'org) (require 'ob-python) (require 'ob-shell)  (org-babel-do-load-languages 'org-babel-load-languages '((python . t) (shell . t))) (find-file \"blocks.org\") (setq org-confirm-babel-evaluate nil) (org-babel-execute-buffer))"
+#+end_src
+
+
+* System information
+
+Documenting my system and emacs versions:
+
+#+begin_src bash
+emacs -Q --batch --eval "(progn (require 'org) (with-temp-file \"system_info.log\" (insert (format \"Emacs Version: %s\nOrg Version: %s\nSystem Type: %s\" (emacs-version) (org-version nil 'full) system-type ))))"
+#+end_src
+
+#+RESULTS:
