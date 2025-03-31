@@ -13,7 +13,7 @@ cat << 'EOF' > blocks.org
 #+PROPERTY: header-args:python :results output drawer :async t :tangle yes :session python_example :python "nix-shell --pure --run python"
 EOF
 
-for i in {1..120}; do
+for i in {1..90}; do
     printf '\n#+begin_src python
 import time
 time.sleep(3)
@@ -25,6 +25,25 @@ done
 
 I chose 90 because I'm not running into this error with 80.
 
+Alternative example with bash:
+
+#+begin_src bash
+#!/bin/bash
+
+cat << 'EOF' > blocks.org
+#+title: Many Blocks
+#+PROPERTY: header-args:bash :results output drawer :async t :tangle yes :session bash_example
+EOF
+
+for i in {1..1200}; do
+    printf '\n#+begin_src bash
+sleep 3
+#+end_src\n' >> blocks.org
+done
+#+end_src
+
+#+RESULTS:
+
 * Run example on minimal emacs config
 
 To reproduce the bug, run the following, which will execute blocks.org:
@@ -33,7 +52,7 @@ Note that (setq org-confirm-babel-evaluate nil) is set, so make sure you trust b
 
 #+name: minimal_emacs
 #+begin_src bash
-emacs -Q --eval "(progn (require 'profiler) (profiler-start 'cpu) (require 'org) (require 'ob-python) (require 'ob-shell) (org-babel-do-load-languages 'org-babel-load-languages '((python . t) (shell . t))) (find-file \"blocks.org\") (setq org-confirm-babel-evaluate nil) (org-babel-execute-buffer) (profiler-report) (profiler-report-write-profile \"profile-report.txt\"))"
+emacs -Q --eval "(progn (require 'profiler) (profiler-start 'cpu) (require 'org) (require 'ob-python) (require 'ob-shell) (org-babel-do-load-languages 'org-babel-load-languages '((python . t) (shell . t))) (find-file \"blocks.org\") (setq org-confirm-babel-evaluate nil) (org-babel-execute-buffer) )"
 #+end_src
 
 
