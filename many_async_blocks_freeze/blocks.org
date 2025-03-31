@@ -1,452 +1,452 @@
 #+title: Many Blocks
-#+PROPERTY: header-args:python :results output drawer :async t :tangle yes :session python_example
+#+PROPERTY: header-args:python :results output drawer :async t :tangle yes :session python_example :python "nix-shell --pure --run python"
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src
 
 #+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src

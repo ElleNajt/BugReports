@@ -10,13 +10,13 @@ Here is a bash script that constructs the example file.
 
 cat << 'EOF' > blocks.org
 #+title: Many Blocks
-#+PROPERTY: header-args:python :results output drawer :async t :tangle yes :session python_example
+#+PROPERTY: header-args:python :results output drawer :async t :tangle yes :session python_example :python "nix-shell --pure --run python"
 EOF
 
 for i in {1..90}; do
     printf '\n#+begin_src python
 import time
-time.sleep(10)
+time.sleep(3)
 #+end_src\n' >> blocks.org
 done
 #+end_src
