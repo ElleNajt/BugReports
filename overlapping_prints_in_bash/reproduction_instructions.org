@@ -13,7 +13,7 @@ Then execute the two cells, making sure to execute the second cell before the fi
 
 The output should look like this:
 
-#+begin_src bash :session test  :async t
+#+begin_src bash
 sleep 10
 echo 1
 #+end_src
@@ -26,7 +26,7 @@ echo 1
 : 1
 
 
-#+begin_src bash :session test  :async t
+#+begin_src bash
 sleep 10
 echo 2
 #+end_src
@@ -38,7 +38,7 @@ echo 2
 Then after a while the second cell finishes it will look like this:
 
 
-#+begin_src bash :session test  :async t
+#+begin_src bash
 sleep 10
 echo 1
 #+end_src
@@ -47,7 +47,7 @@ echo 1
 : 2
 
 
-#+begin_src bash :session test  :async t
+#+begin_src bash
 sleep 10
 echo 2
 #+end_src
