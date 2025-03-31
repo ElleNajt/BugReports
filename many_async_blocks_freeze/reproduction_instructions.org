@@ -13,7 +13,7 @@ cat << 'EOF' > blocks.org
 #+PROPERTY: header-args:python :results output drawer :async t :tangle yes :session python_example :python "nix-shell --pure --run python"
 EOF
 
-for i in {1..90}; do
+for i in {1..120}; do
     printf '\n#+begin_src python
 import time
 time.sleep(3)
@@ -33,7 +33,7 @@ Note that (setq org-confirm-babel-evaluate nil) is set, so make sure you trust b
 
 #+name: minimal_emacs
 #+begin_src bash
-emacs -Q --eval "(progn (require 'org) (require 'ob-python) (require 'ob-shell)  (org-babel-do-load-languages 'org-babel-load-languages '((python . t) (shell . t))) (find-file \"blocks.org\") (setq org-confirm-babel-evaluate nil) (org-babel-execute-buffer))"
+emacs -Q --eval "(progn (require 'profiler) (profiler-start 'cpu) (require 'org) (require 'ob-python) (require 'ob-shell) (org-babel-do-load-languages 'org-babel-load-languages '((python . t) (shell . t))) (find-file \"blocks.org\") (setq org-confirm-babel-evaluate nil) (org-babel-execute-buffer) (profiler-report) (profiler-report-write-profile \"profile-report.txt\"))"
 #+end_src
 
 
